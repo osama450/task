@@ -1,6 +1,8 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:task/core/style/app_theme.dart';
+import 'package:task/modules/auth/bloc/auth_bloc.dart';
 import 'package:task/modules/auth/view/screens/login/login_screen.dart';
 
 Future<void> main() async {
@@ -17,7 +19,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: appThemeData,
-      home: LoginScreen(),
+      home: BlocProvider(
+          create: (_)=> AuthBloc(),
+          child: LoginScreen()),
     );
   }
 }
