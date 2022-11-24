@@ -7,11 +7,10 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
   AuthBloc() : super(AuthInitial()) {
    final AuthRepository _authRepository = AuthRepository();
     on<LoginWithGoogle>((event, emit) async {
+      emit(AuthLoading());
       try {
-        emit(AuthLoading());
-        await _authRepository.signInWithGoogle().then((value) {
-          emit(AuthLoaded(value));
-        });
+       final user =  await _authRepository.signInWithGoogle();
+        emit(AuthLoaded(user));
       } catch (e) {
         emit(AuthError(e.toString()));
       }
@@ -19,14 +18,11 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     on<LoginWithFacebook>((event, emit) async {
       try {
         emit(AuthLoading());
-        await _authRepository.signInWithFacebook().then((value) {
-          emit(AuthLoaded(value));
-        });
+        final user =  await _authRepository.signInWithFacebook();
+        emit(AuthLoaded(user));
       } catch (e) {
         emit(AuthError(e.toString()));
       }
     });
   }
-
-
 }
