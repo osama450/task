@@ -4,7 +4,9 @@ import 'package:task/modules/home/screens/main_screen.dart';
 
 class RegisterNamePartScreen extends StatelessWidget {
   RegisterNamePartScreen({super.key});
-  TextEditingController controller = TextEditingController();
+  TextEditingController name = TextEditingController();
+  TextEditingController surName = TextEditingController();
+
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +33,7 @@ class RegisterNamePartScreen extends StatelessWidget {
                   children: [
                     Expanded(
                       child: TextFormField(
-                        controller: controller,
+                        controller: name,
                         decoration: InputDecoration(
                           hintText: 'Name',
                           hintStyle: Theme.of(context).textTheme.headline4!.copyWith(
@@ -46,7 +48,7 @@ class RegisterNamePartScreen extends StatelessWidget {
                     ),
                     Expanded(
                       child: TextFormField(
-                        controller: controller,
+                        controller: surName,
                         decoration: InputDecoration(
                           hintText: 'Surname',
                           hintStyle: Theme.of(context).textTheme.headline4!.copyWith(
@@ -61,7 +63,7 @@ class RegisterNamePartScreen extends StatelessWidget {
                 SizedBox(
                   height: size.height * 0.03,
                 ),
-                controller.text == ''
+                (name.text == '' || surName.text == '')
                     ? SizedBox(
                         width: size.width * 0.5,
                         child: Text(

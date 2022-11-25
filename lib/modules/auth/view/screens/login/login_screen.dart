@@ -51,7 +51,6 @@ class LoginScreen extends StatelessWidget {
         }
         if (state is AuthError) {
           Navigator.pop(context);
-
           ScaffoldMessenger.of(context)
               .showSnackBar(SnackBar(content: Text(state.message.toString())));
         }
