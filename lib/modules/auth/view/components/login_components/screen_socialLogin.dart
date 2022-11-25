@@ -66,7 +66,12 @@ class ScreenSocialLogin extends StatelessWidget {
                   },
                   child: SvgPicture.asset(Assets.ASSETS_FACEBOOK_LOGO_PNG)),
             ),
-            SvgPicture.asset(Assets.ASSETS_APPLE_LOGO_PNG),
+            InkWell(
+                onTap: (){
+                  ScaffoldMessenger.of(context)
+                      .showSnackBar(const SnackBar(content: Text('Apple sign in need account apple developer to user this service')));
+                },
+                child: SvgPicture.asset(Assets.ASSETS_APPLE_LOGO_PNG)),
           ],
         ),
       ],
