@@ -1,16 +1,7 @@
-# task
+# Technical task
 
-A new Flutter project.
+on this task im used Bloc pattern and Google auth & facbook auth with Firebase and create some screens
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+![Screenshot_1669653077](https://user-images.githubusercontent.com/71011907/204330667-019a6e6c-ee41-48e8-9dcb-919a7b60bb52.png) ![Screenshot_1669653118](https://user-images.githubusercontent.com/71011907/204330918-a2eaf653-2cde-4690-b7fd-3eeea547a900.png) ![Screenshot_1669653121](https://user-images.githubusercontent.com/71011907/204330950-8414a0d9-7f91-44a2-858b-1ff929d794e4.png)
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
